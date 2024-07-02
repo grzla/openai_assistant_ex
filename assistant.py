@@ -1,9 +1,9 @@
 # from open ai cookbook:
 # https://cookbook.openai.com/examples/assistants_api_overview_python
 
+from openai import OpenAI
 from dotenv import load_dotenv
 import os
-from openai import OpenAI
 import time
 load_dotenv()  # Load environment variables from .env file
 api_key = os.getenv("OPENAI_API_KEY")
@@ -54,3 +54,4 @@ if isDelayed:
     time.sleep(1)
 for message in reversed(messages.data): 
     print(message.role + ": " + message.content[0].text.value)
+
